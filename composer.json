@@ -1,0 +1,16 @@
+{
+  "name": "bea/form",
+  "description": "Simple form class for handling form messages and errors and infos in WordPress",
+  "minimum-stability": "stable",
+  "license": "GPL-2.0",
+  "authors": [
+    {
+      "name": "Nicolas Juen",
+      "email": "njuen@beapi.fr"
+    }
+  ],
+  "type" : "wordpress-muplugin",
+  "require" : {
+    "composer/installers" : "~1.0"
+  }
+}
