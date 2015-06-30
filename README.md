@@ -38,7 +38,7 @@ function my_action_check() {
 	/**
 	* Stop script and redirect to the same page with error
 	*/
-	if ( false === $form->check__nonce( 'my-action' ) ) {
+	if ( false === $form->check_nonce( 'my-action' ) ) {
 		/**
 		* This will redirect to : domain.com/my-url?code=0&action=my_action
 		*/
