@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: BEA Form
- Version: 0.2
+ Version: 0.2.1
  Plugin URI: https://github.com/beapi/bea-fom
  Description: Simple form class for handling form messages and errors and infos in WordPress
  Author: Beapi
