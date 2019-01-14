@@ -538,6 +538,28 @@ class BEA_Form {
 
 		$this->display_contextual_message( $action );
 	}
+	
+	/**
+	 * Display the messages depending on the action
+	 *
+	 * @param string $action : action for the contextual messages
+	 * @param string $request_action : the action on the $_REQUEST
+	 * @param string $request_action_value : the REQUEST action value to check on the $_REQUEST data
+	 *
+	 * @return void
+	 * @author Nicolas Juen
+	 */
+	public function display_contextual_or_request( $action = '', $request_action = 'action', $request_action_value = '' ) {
+		$request_action_value = ! empty( $request_action_value ) ? $request_action_value : $action;
+
+		if ( self::element_in_request( $request_action ) === $request_action_value ) {
+			echo $this->display_form_messages();
+
+			return;
+		}
+
+		$this->display_contextual_message( $action );
+	}
 
 	/**
 	 * Return the messages
