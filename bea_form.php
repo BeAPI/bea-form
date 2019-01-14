@@ -459,7 +459,7 @@ class BEA_Form {
 
 		if ( ! empty( $index ) ) {
 			// Return the element in post if present
-			return isset( $_REQUEST[ $slug ][ $index ] ) ? $_REQUEST[ $slug ][ $index ] : null;
+			return isset( $_REQUEST[ $slug ][ $index ] ) ? $_GET[ $slug ][ $index ] : null;
 		}
 
 		return isset( $_REQUEST[ $slug ] ) ? $_REQUEST[ $slug ] : null;
