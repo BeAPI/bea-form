@@ -614,7 +614,10 @@ class BEA_Form {
 	 * @author Nicolas Juen
 	 */
 	private static function get_messages_lines( $messages, $type ) {
-		$out = sprintf( apply_filters( 'bea_form_message_before_block_format', '<ul class="form message %s">', $type ), $type );
+		$out = sprintf(
+			apply_filters( 'bea_form_message_before_block_format', '<ul class="form message alert alert-%s">', $type ),
+			'error' === $type ? 'danger' : 'success'
+		);
 
 		foreach ( $messages as $message ) {
 			$out .= self::get_message_line( $message );
