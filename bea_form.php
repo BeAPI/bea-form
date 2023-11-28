@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: BEA Form
- Version: 0.2.1
+ Version: 0.2.2
  Plugin URI: https://github.com/beapi/bea-fom
  Description: Simple form class for handling form messages and errors and infos in WordPress
  Author: Beapi
@@ -126,7 +126,7 @@ class BEA_Form {
 	 * @return bool
 	 * @author Nicolas Juen
 	 */
-	public function add_general_message( $type = "success", $message ) {
+	public function add_general_message( $type, $message ) {
 		if ( ! isset( $this->messages[ $type ] ) || ! isset( $message ) || empty( $message ) ) {
 			return false;
 		}
